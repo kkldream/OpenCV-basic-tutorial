@@ -1,4 +1,5 @@
 import cv2 #引入函式庫
+
 img = cv2.imread('dog.jpg') #讀取圖片
 print(img.shape)
 
@@ -18,8 +19,6 @@ cv2.circle(img,(300, 410), 30, (0, 255, 255), 3)
 cv2.circle(img,(390, 410), 15, (255, 0, 0), -1)
 
 cv2.imshow('dog', img) #顯示圖片
+
 cv2.waitKey(0) #等待按下任意鍵
 cv2.destroyAllWindows() #關閉所有視窗
-
-
-

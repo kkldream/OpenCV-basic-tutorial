@@ -1,7 +1,9 @@
 import cv2 #引入函式庫
 import numpy as np #引入函式庫
+
 img = cv2.imread('road.jpg') #讀取圖片
 print(img.shape)
+
 cv2.imshow('img', img) #顯示圖片
 
 light = np.uint8(np.clip((1.5 * img + 100), 0, 255)) #調亮
@@ -29,6 +31,3 @@ cv2.imshow('edge', edge)
 
 cv2.waitKey(0) #等待按下任意鍵
 cv2.destroyAllWindows() #關閉所有視窗
-
-
-

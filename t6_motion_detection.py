@@ -2,7 +2,7 @@ import cv2
 cap = cv2.VideoCapture('move.mp4') #讀取影片
 ret, frame = cap.read() #讀取每一幀
 print(frame.shape) #顯示畫面格式
-while(True):
+while True:
     frame_old = frame.copy() #儲存上一幀
     ret, frame = cap.read() #讀取下一幀
     if ret == False: #如果影片沒下一幀
@@ -24,7 +24,7 @@ while(True):
     cv2.imshow('3.filt', filt)
     cv2.imshow('4.result', result)
     cv2.imshow('5.draw', draw)
-    if cv2.waitKey(30) & 0xFF == ord('q'): break #按Q跳出
+    if cv2.waitKey(1) & 0xFF == ord('q'): break #按Q跳出
 cap.release()
 cv2.destroyAllWindows()
 
